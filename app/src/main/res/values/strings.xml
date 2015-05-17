@@ -16,4 +16,8 @@
     <string name="home_title">Bomb Squad</string>
     <string name="score_text">Score:</string>
     <string name="time_text">Time:</string>
+    <string name="title_activity_scoring">ScoringActivity</string>
+    <string name="click_instruction_text">Click For Instruction</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-3297319032078557/9209466427</string>
 </resources>

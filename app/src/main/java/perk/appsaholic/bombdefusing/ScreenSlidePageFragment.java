@@ -18,12 +18,16 @@ package perk.appsaholic.bombdefusing;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class ScreenSlidePageFragment extends android.support.v4.app.Fragment {
+
+    ViewPager mPager;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,6 +42,16 @@ public class ScreenSlidePageFragment extends android.support.v4.app.Fragment {
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), HomeActivity.class));
                 getActivity().finish();
+            }
+        });
+
+        mPager = (ViewPager) getActivity().findViewById(R.id.pager);
+
+        Button nextBtn = (Button) rootView.findViewById(R.id.next);
+        nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mPager.setCurrentItem(1);
             }
         });
 

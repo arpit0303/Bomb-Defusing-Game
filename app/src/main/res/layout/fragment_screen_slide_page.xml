@@ -17,36 +17,47 @@
         android:textSize="35dp"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primaryColorDark"
+        android:text="NEXT"
+        android:textColor="@android:color/white"
+        android:textSize="22sp" />
 
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/next"
         android:layout_below="@+id/story_text"
         android:layout_marginTop="15dp">
 
         <TextView
+            android:id="@+id/instruction_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:text="@string/instruction"
             android:textColor="@android:color/white"
-            android:textSize="25sp"
-            android:id="@+id/instruction_text" />
+            android:textSize="25sp" />
     </ScrollView>
 
     <TextView
+        android:id="@+id/skip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SKIP"
-        android:id="@+id/skip"
-        android:textStyle="italic"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:textSize="22sp"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="SKIP"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:textStyle="italic" />
+
 </RelativeLayout>

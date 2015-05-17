@@ -25,20 +25,40 @@
         android:textStyle="bold"
         android:layout_marginTop="5dp"/>
 
-    <Button
+    <LinearLayout
+        android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/primaryColorDark"
-        android:id="@+id/done"
-        android:text="DONE"
-        android:textColor="@android:color/white"
-        android:textSize="25sp"/>
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/previous"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primaryColorDark"
+            android:text="PREVIOUS"
+            android:layout_weight="1"
+            android:layout_marginRight="1dp"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="1dp"
+            android:background="@color/primaryColorDark"
+            android:text="Done"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/done"
+        android:layout_above="@+id/linear"
         android:layout_below="@+id/police_text"
         android:layout_marginTop="20dp">
 

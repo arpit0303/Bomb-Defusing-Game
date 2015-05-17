@@ -13,46 +13,78 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:src="@drawable/police" />
+
     <TextView
+        android:id="@+id/police_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Police"
         android:layout_below="@+id/insturctor_image"
+        android:layout_marginTop="5dp"
         android:gravity="center"
+        android:text="Police"
         android:textColor="@android:color/white"
-        android:id="@+id/police_text"
         android:textSize="35sp"
-        android:textStyle="bold"
-        android:layout_marginTop="5dp"/>
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/previous"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primaryColorDark"
+            android:text="PREVIOUS"
+            android:layout_weight="1"
+            android:layout_marginRight="1dp"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="1dp"
+            android:background="@color/primaryColorDark"
+            android:text="NEXT"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/linear"
         android:layout_below="@+id/police_text"
         android:layout_marginTop="20dp">
 
         <TextView
+            android:id="@+id/police_instructions"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:text="@string/police_instruction"
             android:textColor="@android:color/white"
-            android:textSize="25sp"
-            android:id="@+id/police_instructions" />
+            android:textSize="25sp" />
     </ScrollView>
 
     <TextView
+        android:id="@+id/skip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SKIP"
-        android:id="@+id/skip"
-        android:textStyle="italic"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:textSize="22sp"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="SKIP"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:textStyle="italic" />
 </RelativeLayout>

@@ -1,6 +1,7 @@
 package perk.appsaholic.bombdefusing;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -8,9 +9,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.perk.perksdk.PerkManager;
 
 import java.util.Random;
 
@@ -38,7 +36,6 @@ public class MainActivity extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        PerkManager.startSession(MainActivity.this, "1fae721c1e63fcc879d8d2d18c68777696a43557");
         mScore = (TextView) findViewById(R.id.score);
         mTimer = (TextView) findViewById(R.id.time);
         mInstructor = (ImageView) findViewById(R.id.instructor);
@@ -64,10 +61,12 @@ public class MainActivity extends Activity implements OnClickListener {
             @Override
             public void onFinish() {
                 mTimer.setText("Over!!");
-                PerkManager.showPortal(MainActivity.this, "1fae721c1e63fcc879d8d2d18c68777696a43557");
-                Toast.makeText(MainActivity.this, "Your Score : " + score, Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, ScoringActivity.class);
+                intent.putExtra("score", score);
+                startActivity(intent);
                 score = 0;
                 MainActivity.this.finish();
+                countDownTimer.cancel();
             }
 
         }.start();
@@ -78,6 +77,7 @@ public class MainActivity extends Activity implements OnClickListener {
     //and the button to choose.
     private void shuffle() {
         mInstructorRandom = instructorRandom.nextInt(2);
+        mSuggestionRandom = suggestionRandom.nextInt(2);
         mSuggestionRandom = suggestionRandom.nextInt(2);
     }
 
@@ -95,8 +95,7 @@ public class MainActivity extends Activity implements OnClickListener {
                     mScore.setText(score +"");
                 }
                 shuffle();
-                shuffle();
-                shuffle();
+
                 setResources();
                 break;
 
@@ -110,8 +109,6 @@ public class MainActivity extends Activity implements OnClickListener {
                     score -= 5;
                     mScore.setText(score +"");
                 }
-
-                shuffle();
                 shuffle();
                 setResources();
                 break;
@@ -147,8 +144,9 @@ public class MainActivity extends Activity implements OnClickListener {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        score = 0;
         countDownTimer.onFinish();
+        countDownTimer.cancel();
+        finish();
 
     }
 }
