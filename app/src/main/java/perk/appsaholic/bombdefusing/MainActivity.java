@@ -8,6 +8,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.perk.perksdk.PerkManager;
 
@@ -64,6 +65,7 @@ public class MainActivity extends Activity implements OnClickListener {
             public void onFinish() {
                 mTimer.setText("Over!!");
                 PerkManager.showPortal(MainActivity.this, "1fae721c1e63fcc879d8d2d18c68777696a43557");
+                Toast.makeText(MainActivity.this, "Your Score : " + score, Toast.LENGTH_LONG).show();
                 score = 0;
                 MainActivity.this.finish();
             }
