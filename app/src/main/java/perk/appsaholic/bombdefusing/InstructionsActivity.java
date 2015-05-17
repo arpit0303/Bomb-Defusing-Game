@@ -14,7 +14,7 @@ import android.support.v4.view.ViewPager;
 public class InstructionsActivity extends FragmentActivity {
 
     /**
-     * The number of pages (wizard steps) to show in this demo.
+     * The number of pages (wizard steps) to show.
      */
     private static final int NUM_PAGES = 3;
 
@@ -48,10 +48,7 @@ public class InstructionsActivity extends FragmentActivity {
         mPager.setAdapter(mPagerAdapter);
     }
 
-    /**
-     * A simple pager adapter that represents 5 {@link ScreenSlidePageFragment} objects, in
-     * sequence.
-     */
+
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
         public ScreenSlidePagerAdapter(FragmentManager fm) {
             super(fm);

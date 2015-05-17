@@ -21,6 +21,8 @@ public class HomeActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        //It is for saving the visiting count so when user came for secound time. He/She didn't go diectly to instuctions
+        //because he/she knows the instuctions.
         SharedPreferences sharedPreferences = getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
         if(sharedPreferences.getString(preferenceValue, "").equals("")){
             SharedPreferences.Editor editor = sharedPreferences.edit();

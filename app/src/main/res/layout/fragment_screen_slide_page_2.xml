@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/insturctor_image"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_alignParentTop="true"
@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Terrorist"
-        android:layout_below="@+id/imageView"
+        android:layout_below="@+id/insturctor_image"
         android:gravity="center"
         android:textColor="@android:color/white"
         android:id="@+id/police_text"
@@ -49,7 +49,8 @@
             android:paddingRight="16dp"
             android:text="@string/terrorist_instruction"
             android:textColor="@android:color/white"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:id="@+id/terrorist_instruction" />
     </ScrollView>
 
 </RelativeLayout>

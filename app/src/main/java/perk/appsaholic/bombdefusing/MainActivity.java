@@ -52,6 +52,7 @@ public class MainActivity extends Activity implements OnClickListener {
         greenBtn.setOnClickListener(this);
         redBtn.setOnClickListener(this);
 
+        //For Timer
         countDownTimer = new CountDownTimer(60000,1000){
 
             @Override
@@ -71,6 +72,8 @@ public class MainActivity extends Activity implements OnClickListener {
 
     }
 
+    //For generating random number for swicthing between poloce and thief
+    //and the button to choose.
     private void shuffle() {
         mInstructorRandom = instructorRandom.nextInt(2);
         mSuggestionRandom = suggestionRandom.nextInt(2);
@@ -89,7 +92,6 @@ public class MainActivity extends Activity implements OnClickListener {
                     score -= 5;
                     mScore.setText(score +"");
                 }
-
                 shuffle();
                 shuffle();
                 shuffle();
@@ -121,6 +123,7 @@ public class MainActivity extends Activity implements OnClickListener {
         mSuggestion.setText(suggestions[mSuggestionRandom]);
     }
 
+    //It will give the correct output button to press
     private String checkingOutput(){
         if(mInstructorRandom == 0 && mSuggestionRandom == 0){
             return "red";

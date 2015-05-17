@@ -17,7 +17,7 @@
             android:id="@+id/scoreText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Score: "
+            android:text="@string/score_text"
             android:textColor="@android:color/white"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -26,7 +26,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/scoreText"
-            android:text="New Text"
             android:textColor="@android:color/white"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -35,7 +34,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="New Text"
             android:textColor="@android:color/white"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -44,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toLeftOf="@+id/time"
-            android:text="Time: "
+            android:text="@string/time_text"
             android:textColor="@android:color/white"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -63,7 +61,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/instructor"
             android:padding="20dp"
-            android:text="ejhbjhbfjke"
             android:textColor="@android:color/white"
             android:textSize="35sp" />
 
