@@ -11,10 +11,10 @@
         android:id="@+id/home_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="70dp"
         android:text="@string/home_title"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/title_bomb_squad"
+        android:textSize="@dimen/title_bomb_squad_xlarge"
         android:textStyle="bold"
         android:padding="10dp"
         android:layout_alignParentTop="true"
@@ -27,22 +27,22 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/home_title"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="70dp"
         android:text="Your Score is : "
         android:padding="10dp"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/final_scoring_text" />
+        android:textSize="@dimen/final_scoring_text_xlarge" />
 
     <perk.appsaholic.bombdefusing.FontableButton
         android:id="@+id/play_again"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/primaryColorDark"
-        android:padding="10dp"
+        android:padding="20dp"
         android:text="PLAY AGAIN"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/all_btn_text"
-        android:layout_marginTop="80dp"
+        android:textSize="@dimen/all_btn_text_xlarge"
+        android:layout_marginTop="150dp"
         android:layout_below="@+id/score_show"
         android:layout_centerHorizontal="true" />
 
@@ -64,16 +64,16 @@
         android:layout_marginBottom="25dp"
         android:layout_above="@+id/adView"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/click_instruction_text"
+        android:textSize="@dimen/click_instruction_text_xlarge"
         android:text="@string/click_instruction_text" />
 
     <perk.appsaholic.bombdefusing.FontableButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="HOME"
-        android:padding="10dp"
+        android:padding="20dp"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/all_btn_text"
+        android:textSize="@dimen/all_btn_text_xlarge"
         android:id="@+id/homeBtn"
         android:background="@color/primaryColorDark"
         android:layout_below="@+id/play_again"

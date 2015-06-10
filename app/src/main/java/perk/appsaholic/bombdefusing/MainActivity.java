@@ -43,7 +43,7 @@ public class MainActivity extends Activity implements OnClickListener {
         Button redBtn = (Button) findViewById(R.id.red_btn);
         mSuggestion = (TextView) findViewById(R.id.suggestion);
 
-        mScore.setText(score + "");
+        mScore.setText(" "+ score +" ");
         shuffle();
         setResources();
 
@@ -55,7 +55,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
             @Override
             public void onTick(long l) {
-                mTimer.setText((int) (l/1000)+ "");
+                mTimer.setText(" "+ (int) (l/1000)+ " ");
             }
 
             @Override
@@ -88,11 +88,11 @@ public class MainActivity extends Activity implements OnClickListener {
                 String greenOutput = checkingOutput();
                 if(greenOutput.equals("green")){
                     score += 5;
-                    mScore.setText(score +"");
+                    mScore.setText(" "+ score +" ");
                 }
                 else{
                     score -= 5;
-                    mScore.setText(score +"");
+                    mScore.setText(" "+ score +" ");
                 }
                 shuffle();
 
@@ -103,11 +103,11 @@ public class MainActivity extends Activity implements OnClickListener {
                 String redOutput = checkingOutput();
                 if(redOutput.equals("red")){
                     score += 5;
-                    mScore.setText(score +"");
+                    mScore.setText(" "+ score +" ");
                 }
                 else{
                     score -= 5;
-                    mScore.setText(score +"");
+                    mScore.setText(" "+ score +" ");
                 }
                 shuffle();
                 setResources();

@@ -21,10 +21,12 @@
 
         <activity
             android:name=".InstructionsActivity"
-            android:label="@string/title_activity_instructions" />
+            android:label="@string/title_activity_instructions"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".HomeActivity"
-            android:label="@string/title_activity_home" >
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,7 +35,8 @@
         </activity>
         <activity
             android:name=".ScoringActivity"
-            android:label="@string/title_activity_scoring" >
+            android:label="@string/title_activity_scoring"
+            android:screenOrientation="portrait">
         </activity>
 
         <!--Include the AdActivity configChanges and theme. -->

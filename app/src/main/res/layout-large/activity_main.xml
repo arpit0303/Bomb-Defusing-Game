@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/score_text"
-            android:textSize="@dimen/score_time_text"
+            android:textSize="@dimen/score_time_text_large"
             android:textColor="@android:color/white"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -26,7 +26,7 @@
             android:id="@+id/score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/score_time_text"
+            android:textSize="@dimen/score_time_text_large"
             android:layout_toRightOf="@+id/scoreText"
             android:textColor="@android:color/white"
             android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -35,7 +35,7 @@
             android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/score_time_text"
+            android:textSize="@dimen/score_time_text_large"
             android:layout_alignParentRight="true"
             android:textColor="@android:color/white"
             android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -44,7 +44,7 @@
             android:id="@+id/timeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/score_time_text"
+            android:textSize="@dimen/score_time_text_large"
             android:layout_toLeftOf="@+id/time"
             android:text="@string/time_text"
             android:textColor="@android:color/white"
@@ -54,8 +54,8 @@
 
         <ImageView
             android:id="@+id/instructor"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:layout_marginTop="50dp"
             android:src="@drawable/police" />
 
@@ -66,7 +66,8 @@
             android:layout_below="@+id/instructor"
             android:padding="20dp"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/instruction_main_text" />
+            android:text="Press GREEN Button"
+            android:textSize="@dimen/instruction_main_text_large" />
 
 
     <LinearLayout
@@ -78,8 +79,8 @@
 
         <perk.appsaholic.bombdefusing.FontableButton
             android:id="@+id/green_btn"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_marginLeft="20dp"
             android:background="@drawable/round_button_green" />
 
@@ -89,8 +90,8 @@
 
         <perk.appsaholic.bombdefusing.FontableButton
             android:id="@+id/red_btn"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:background="@drawable/round_button_red" />
     </LinearLayout>
 

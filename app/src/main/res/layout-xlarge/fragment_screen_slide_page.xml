@@ -15,7 +15,7 @@
         android:text="Story..."
         android:padding="10dp"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/story_text"
+        android:textSize="@dimen/story_text_xlarge"
         android:textStyle="bold" />
 
     <perk.appsaholic.bombdefusing.FontableButton
@@ -23,10 +23,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:padding="10dp"
         android:background="@color/primaryColorDark"
         android:text="NEXT"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/all_btn_text" />
+        android:textSize="@dimen/all_btn_text_xlarge" />
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -40,11 +41,11 @@
             android:id="@+id/instruction_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp"
             android:text="@string/instruction"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/instruction_text" />
+            android:textSize="@dimen/instruction_text_xlarge" />
     </ScrollView>
 
     <perk.appsaholic.bombdefusing.FontableTextView
@@ -59,7 +60,7 @@
         android:padding="10dp"
         android:text="SKIP"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/skip_text"
+        android:textSize="@dimen/skip_text_xlarge"
         android:textStyle="italic" />
 
 </RelativeLayout>

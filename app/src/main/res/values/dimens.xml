@@ -2,4 +2,37 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="title_bomb_squad">40sp</dimen>
+    <dimen name="final_scoring_text">35sp</dimen>
+    <dimen name="all_btn_text">28sp</dimen>
+    <dimen name="story_text">38sp</dimen>
+    <dimen name="instruction_text">30sp</dimen>
+    <dimen name="skip_text">22sp</dimen>
+    <dimen name="click_instruction_text">30sp</dimen>
+    <dimen name="instructer_text">35sp</dimen>
+    <dimen name="score_time_text">25sp</dimen>
+    <dimen name="instruction_main_text">35sp</dimen>
+
+    <dimen name="title_bomb_squad_large">45sp</dimen>
+    <dimen name="final_scoring_text_large">40sp</dimen>
+    <dimen name="all_btn_text_large">33sp</dimen>
+    <dimen name="story_text_large">43sp</dimen>
+    <dimen name="instruction_text_large">35sp</dimen>
+    <dimen name="skip_text_large">27sp</dimen>
+    <dimen name="click_instruction_text_large">35sp</dimen>
+    <dimen name="instructer_text_large">40sp</dimen>
+    <dimen name="score_time_text_large">30sp</dimen>
+    <dimen name="instruction_main_text_large">40sp</dimen>
+
+    <dimen name="title_bomb_squad_xlarge">65sp</dimen>
+    <dimen name="final_scoring_text_xlarge">60sp</dimen>
+    <dimen name="all_btn_text_xlarge">53sp</dimen>
+    <dimen name="story_text_xlarge">63sp</dimen>
+    <dimen name="instruction_text_xlarge">55sp</dimen>
+    <dimen name="skip_text_xlarge">48sp</dimen>
+    <dimen name="click_instruction_text_xlarge">55sp</dimen>
+    <dimen name="instructer_text_xlarge">60sp</dimen>
+    <dimen name="score_time_text_xlarge">50sp</dimen>
+    <dimen name="instruction_main_text_xlarge">62sp</dimen>
 </resources>
