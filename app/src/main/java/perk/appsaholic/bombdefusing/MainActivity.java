@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,7 +13,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 
-public class MainActivity extends Activity implements OnClickListener {
+public class MainActivity extends Activity implements View.OnTouchListener {
 
     ImageView mInstructor;
     TextView mSuggestion;
@@ -30,6 +30,12 @@ public class MainActivity extends Activity implements OnClickListener {
     static int score = 0;
     CountDownTimer countDownTimer;
 
+    Button greenBtn;
+    Button redBtn;
+
+    private int mInstructorRandom1 = 0;
+    private int mSuggestionRandom1 = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,19 +45,19 @@ public class MainActivity extends Activity implements OnClickListener {
         mScore = (TextView) findViewById(R.id.score);
         mTimer = (TextView) findViewById(R.id.time);
         mInstructor = (ImageView) findViewById(R.id.instructor);
-        Button greenBtn = (Button) findViewById(R.id.green_btn);
-        Button redBtn = (Button) findViewById(R.id.red_btn);
+        greenBtn = (Button) findViewById(R.id.green_btn);
+        redBtn = (Button) findViewById(R.id.red_btn);
         mSuggestion = (TextView) findViewById(R.id.suggestion);
 
         mScore.setText(" "+ score +" ");
         shuffle();
         setResources();
 
-        greenBtn.setOnClickListener(this);
-        redBtn.setOnClickListener(this);
+        greenBtn.setOnTouchListener(this);
+        redBtn.setOnTouchListener(this);
 
         //For Timer
-        countDownTimer = new CountDownTimer(60000,1000){
+        countDownTimer = new CountDownTimer(20000,1000){
 
             @Override
             public void onTick(long l) {
@@ -76,45 +82,16 @@ public class MainActivity extends Activity implements OnClickListener {
     //For generating random number for swicthing between poloce and thief
     //and the button to choose.
     private void shuffle() {
-        mInstructorRandom = instructorRandom.nextInt(2);
-        mSuggestionRandom = suggestionRandom.nextInt(2);
-        mSuggestionRandom = suggestionRandom.nextInt(2);
-    }
+        mInstructorRandom1 = instructorRandom.nextInt(2);
+        mSuggestionRandom1 = suggestionRandom.nextInt(2);
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.green_btn:
-                String greenOutput = checkingOutput();
-                if(greenOutput.equals("green")){
-                    score += 5;
-                    mScore.setText(" "+ score +" ");
-                }
-                else{
-                    score -= 5;
-                    mScore.setText(" "+ score +" ");
-                }
-                shuffle();
-
-                setResources();
-                break;
-
-            case R.id.red_btn:
-                String redOutput = checkingOutput();
-                if(redOutput.equals("red")){
-                    score += 5;
-                    mScore.setText(" "+ score +" ");
-                }
-                else{
-                    score -= 5;
-                    mScore.setText(" "+ score +" ");
-                }
-                shuffle();
-                setResources();
-                break;
-            default:
-                break;
+        while (mInstructorRandom == mInstructorRandom1 && mSuggestionRandom == mSuggestionRandom1 ){
+            mInstructorRandom1 = instructorRandom.nextInt(2);
+            mSuggestionRandom1 = suggestionRandom.nextInt(2);
         }
+
+        mInstructorRandom = mInstructorRandom1;
+        mSuggestionRandom = mSuggestionRandom1;
     }
 
     private void setResources() {
@@ -148,5 +125,50 @@ public class MainActivity extends Activity implements OnClickListener {
         countDownTimer.cancel();
         finish();
 
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        switch (v.getId()) {
+            case R.id.green_btn:
+                int action = event.getAction();
+                if (action == MotionEvent.ACTION_DOWN) {
+                    String greenOutput = checkingOutput();
+                    if (greenOutput.equals("green")) {
+                        score += 10;
+                        mScore.setText(score + "");
+                    } else {
+                        score -= 10;
+                        mScore.setText(score + "");
+                    }
+                    shuffle();
+                    setResources();
+                    greenBtn.setAlpha(0.2f);
+                } else {
+                    greenBtn.setAlpha(1f);
+                }
+                return true;
+
+            case R.id.red_btn:
+                int action1 = event.getAction();
+                if (action1 == MotionEvent.ACTION_DOWN) {
+                    String redOutput = checkingOutput();
+                    if (redOutput.equals("red")) {
+                        score += 10;
+                        mScore.setText(score + "");
+                    } else {
+                        score -= 10;
+                        mScore.setText(score + "");
+                    }
+                    shuffle();
+                    setResources();
+                    redBtn.setAlpha(0.2f);
+                } else {
+                    redBtn.setAlpha(1f);
+                }
+                return true;
+            default:
+                return false;
+        }
     }
 }

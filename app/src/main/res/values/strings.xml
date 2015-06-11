@@ -9,7 +9,7 @@
     <string name="action_finish">Finish</string>
     <string name="action_next">Next</string>
     
-    <string name="instruction">Some terrorist planted a bomb, you are the only one there from the bomb squad team to defuse it, to do that you need to press the green and red buttons in some pattern. \nYou asked the police for assistance through some imaginary communication system, but the terrorist found it. He is trying to hack into the system to give you false assistance, now the access of that system is getting fluctuated between police and terrorist.</string>
+    <string name="instruction">Some terrorist planted a bomb, you are the only one there from the bomb squad team to defuse it, to do that you need to press the green and red buttons in some pattern. \nYou asked the police for assistance through some communication system, but the terrorist found it. He is trying to hack into the system to give you false assistance, now the access of that system is getting fluctuated between police and terrorist.</string>
     <string name="police_instruction">You should trust the police and follow his instructions. \nExample: if police says press the red button you have to press it.</string>
     <string name="terrorist_instruction">In the case of terrorist, You should do the opposite whatever he tells. \nExample: if terrorist says press the red button you have to press the green.</string>
     <string name="title_activity_home">Bomb Squad</string>

@@ -11,7 +11,7 @@
         android:id="@+id/home_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:text="@string/home_title"
         android:textColor="@android:color/white"
         android:textSize="@dimen/title_bomb_squad"
@@ -22,12 +22,25 @@
         android:layout_alignStart="@+id/score_show" />
 
     <perk.appsaholic.bombdefusing.FontableTextView
-        android:id="@+id/score_show"
+        android:id="@+id/high_score_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/home_title"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
+        android:text="Congrats!!\nHigh Score : "
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/final_scoring_text" />
+
+    <perk.appsaholic.bombdefusing.FontableTextView
+        android:id="@+id/score_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/high_score_show"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:text="Your Score is : "
         android:padding="10dp"
         android:textColor="@android:color/white"
@@ -42,7 +55,7 @@
         android:text="PLAY AGAIN"
         android:textColor="@android:color/white"
         android:textSize="@dimen/all_btn_text"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/score_show"
         android:layout_centerHorizontal="true" />
 
@@ -61,7 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="10dp"
         android:layout_above="@+id/adView"
         android:textColor="@android:color/white"
         android:textSize="@dimen/click_instruction_text"
@@ -78,7 +91,7 @@
         android:background="@color/primaryColorDark"
         android:layout_below="@+id/play_again"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="10dp" />
 
 
 </RelativeLayout>

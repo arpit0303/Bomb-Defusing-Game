@@ -11,7 +11,7 @@
         android:id="@+id/home_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="60dp"
         android:text="@string/home_title"
         android:textColor="@android:color/white"
         android:textSize="@dimen/title_bomb_squad_xlarge"
@@ -22,12 +22,25 @@
         android:layout_alignStart="@+id/score_show" />
 
     <perk.appsaholic.bombdefusing.FontableTextView
-        android:id="@+id/score_show"
+        android:id="@+id/high_score_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/home_title"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="30dp"
+        android:text="Congrats!!\nHigh Score : "
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/final_scoring_text_xlarge" />
+
+    <perk.appsaholic.bombdefusing.FontableTextView
+        android:id="@+id/score_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/high_score_show"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
         android:text="Your Score is : "
         android:padding="10dp"
         android:textColor="@android:color/white"
@@ -42,7 +55,7 @@
         android:text="PLAY AGAIN"
         android:textColor="@android:color/white"
         android:textSize="@dimen/all_btn_text_xlarge"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="60dp"
         android:layout_below="@+id/score_show"
         android:layout_centerHorizontal="true" />
 
